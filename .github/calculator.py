@@ -5,9 +5,9 @@ def get_valid_grade(index):
             if 0.0 <= grade <= 4.0:
                 return grade
             else:
-                print("❌ That grade is out of range. Try again.")
+                print("That grade is out of range. Try again.")
         except ValueError:
-            print("❌ Not a valid number. Try again.")
+            print("Not a valid number. Try again.")
 
 def calculate_gpa(grades):
     return round(sum(grades) / len(grades), 2)
@@ -62,7 +62,7 @@ def goal_gpa_check(grades, current_gpa):
 
 # --- Main Program ---
 
-print("4Welcome to the Overly Verbose GPA Calculator 🎓")
+print("4Welcome to the Overly Verbose GPA Calculator ")
 
 while True:
     try:
