@@ -29,3 +29,66 @@
 **Configuration & Testing**
 
   -No external configuration is needed; all inputs are entered via prompts. To test, simply run the script and follow the prompts—try entering valid/invalid grades, and different goal GPAs to see how the program responds.
+
+**decision tree**
+  
+  -START
+│
+├── Display welcome message ("Greetings, noble scholar...")
+│
+├── Ask: "Would you like to load a previous GPA record?"  
+│     │
+│     ├── YES → Load file → Display loaded data summary  
+│     │          │
+│     │          └── Proceed to "Add New Semester?"  
+│     │
+│     └── NO → Start fresh GPA record  
+│
+├── Ask: "Would you like to add a new semester?"  
+│     │
+│     ├── NO → Go to "View or Save Results"  
+│     │
+│     └── YES → Begin semester entry  
+│           │
+│           ├── Ask: "Enter course name"  
+│           ├── Ask: "Enter credit hours"  
+│           ├── Ask: "Enter letter grade (A–F)"  
+│           │
+│           ├── Validate grade input  
+│           │     ├── If INVALID → Show error message and re-prompt  
+│           │     └── If VALID → Continue  
+│           │
+│           ├── Ask: "Add another course?"  
+│           │     ├── YES → Repeat course entry  
+│           │     └── NO → Calculate semester GPA  
+│           │
+│           ├── Display verbose GPA result  
+│           │     ("Your semester GPA stands tall at 3.72!")  
+│           │
+│           ├── Add semester GPA to cumulative total  
+│           │
+│           └── Ask: "Add another semester?"  
+│                 ├── YES → Loop back to semester entry  
+│                 └── NO → Proceed  
+│
+├── Display cumulative GPA  
+│
+├── Ask: "Would you like to set a target GPA?"  
+│     │
+│     ├── NO → Proceed to Save  
+│     └── YES →  
+│           ├── Ask: "Enter desired target GPA"  
+│           ├── Calculate required future GPA  
+│           └── Display verbose prediction  
+│               ("You must achieve an average of 3.88 next term.  
+│                 Time to unleash your inner scholar!")  
+│
+├── Ask: "Would you like to save your GPA data to file?"  
+│     │
+│     ├── NO → End session with farewell message  
+│     └── YES → Save file → Confirm success  
+│
+└── END ("Farewell, academic adventurer! May your grades ever rise.")
+
+
+
